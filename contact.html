@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CyberShield AI — Contact</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="favicon.ico" />
+</head>
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">CyberShield AI</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="container py-5">
+    <div class="row align-items-center g-4">
+      <div class="col-12 col-lg-6">
+        <h1 class="display-5">Связаться с нами</h1>
+        <p class="lead">
+          Заполните форму ниже, и мы свяжемся с вами в ближайшее время.
+        </p>
+      </div>
+      <div class="col-12 col-lg-6">
+        <div class="ratio ratio-16x9 shadow rounded">
+          <img 
+            src="/images/ChatGPT Image 15 окт. 2025 г., 17_04_00.png" 
+            alt="Contact Us" 
+            class="img-fluid rounded"
+            style="object-fit: cover; width: 100%; height: 100%;" 
+          />
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- CONTACT FORM -->
+  <main class="container py-5">
+    <h2 class="h3 mb-4">Форма запроса</h2>
+    <form id="contactForm" class="needs-validation" novalidate>
+      <div class="row g-3">
+        <div class="col-md-6">
+          <label for="firstName" class="form-label">First Name</label>
+          <input type="text" class="form-control" id="firstName" required>
+          <div class="invalid-feedback">Введите ваше имя</div>
+        </div>
+        <div class="col-md-6">
+          <label for="lastName" class="form-label">Last Name</label>
+          <input type="text" class="form-control" id="lastName" required>
+          <div class="invalid-feedback">Введите вашу фамилию</div>
+        </div>
+        <div class="col-md-6">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" class="form-control" id="email" required>
+          <div class="invalid-feedback">Введите корректный email</div>
+        </div>
+        <div class="col-md-6">
+          <label for="phone" class="form-label">Phone (US)</label>
+          <input type="tel" class="form-control" id="phone" pattern="^\(\d{3}\) \d{3}-\d{4}$" placeholder="(123) 456-7890" required>
+          <div class="invalid-feedback">Введите корректный US телефон (например, (123) 456-7890)</div>
+        </div>
+        <div class="col-12">
+          <label for="address1" class="form-label">Address</label>
+          <input type="text" class="form-control mb-2" id="address1" placeholder="Address 1" required>
+          <input type="text" class="form-control" id="address2" placeholder="Address 2">
+          <div class="invalid-feedback">Введите адрес</div>
+        </div>
+        <div class="col-md-4">
+          <label for="city" class="form-label">City</label>
+          <input type="text" class="form-control" id="city" required>
+          <div class="invalid-feedback">Введите город</div>
+        </div>
+        <div class="col-md-4">
+          <label for="state" class="form-label">State</label>
+          <select id="state" class="form-select" required>
+            <option value="">Выберите...</option>
+            <option>CA</option>
+            <option>NY</option>
+            <option>TX</option>
+            <option>FL</option>
+            <option>Other</option>
+          </select>
+          <div class="invalid-feedback">Выберите штат</div>
+        </div>
+        <div class="col-md-4">
+          <label for="zip" class="form-label">ZIP</label>
+          <input type="text" class="form-control" id="zip" pattern="^\d{5}(-\d{4})?$" placeholder="12345 or 12345-6789" required>
+          <div class="invalid-feedback">Введите корректный ZIP</div>
+        </div>
+        <div class="col-md-6">
+          <label for="projectType" class="form-label">Project Type</label>
+          <select id="projectType" class="form-select" required>
+            <option value="">Выберите...</option>
+            <option>Penetration Test</option>
+            <option>Incident Response</option>
+            <option>Red Team</option>
+            <option>Consulting</option>
+          </select>
+          <div class="invalid-feedback">Выберите тип проекта</div>
+        </div>
+        <div class="col-md-6">
+          <label for="budget" class="form-label">Budget</label>
+          <input type="number" class="form-control" id="budget" placeholder="USD" required>
+          <div class="invalid-feedback">Введите бюджет</div>
+        </div>
+        <div class="col-12">
+          <label for="message" class="form-label">Message</label>
+          <textarea class="form-control" id="message" rows="4" required></textarea>
+          <div class="invalid-feedback">Введите сообщение</div>
+        </div>
+        <!-- Honeypot field -->
+        <div style="display:none;">
+          <input type="text" id="website" name="website" />
+        </div>
+        <div class="col-12 form-check">
+          <input type="checkbox" class="form-check-input" id="consent" required>
+          <label class="form-check-label" for="consent">I consent to be contacted</label>
+          <div class="invalid-feedback">Необходимо согласие</div>
+        </div>
+        <div class="col-12">
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+      </div>
+    </form>
+
+    <!-- Success alert -->
+    <div class="alert alert-success mt-4 visually-hidden" role="alert" id="successAlert" aria-live="polite">
+      Спасибо! Форма успешно отправлена.
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-dark text-white mt-5">
+    <div class="container py-3 text-center small">
+      <p class="mb-0">&copy; <span id="year"></span> CyberShield AI. Все права защищены.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="main.js"></script>
+  <script>
+    // Bootstrap form validation + honeypot + success alert
+    const form = document.getElementById('contactForm');
+    const successAlert = document.getElementById('successAlert');
+
+    form.addEventListener('submit', function(event) {
+      event.preventDefault();
+      event.stopPropagation();
+
+      if (form.checkValidity() && !document.getElementById('website').value) {
+        // show success
+        successAlert.classList.remove('visually-hidden');
+        form.classList.remove('was-validated');
+        form.reset();
+      } else {
+        successAlert.classList.add('visually-hidden');
+        form.classList.add('was-validated');
+      }
+    });
+  </script>
+</body>
+</html>
+
